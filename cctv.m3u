@@ -1,0 +1,115 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="Cctv01" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 01 ลาดหญ้า หน้าโรงพักเก่า ลาดหญ้า
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_01
+#EXTINF:-1 tvg-id="Cctv02" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 02 ลาดหญ้า หน้าชุมสายTOT ก่อนถึง รร.วัดทุ่งลาดหญ้า
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_02
+#EXTINF:-1 tvg-id="Cctv03" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 03 วังสารภี หน้าหมู่บ้านพฤกษากาญจน์
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_03
+#EXTINF:-1 tvg-id="Cctv04" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 04 วังสารภี ตรงข้ามวัดหัวนา
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_04
+#EXTINF:-1 tvg-id="Cctv05" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 05 วังสารภี-ก่อนถึงหมู่บ้านศิริชัย 4
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_05
+#EXTINF:-1 tvg-id="Cctv06" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 06 วังสารภี-ตรงข้ามหมู่บ้านศิริชัย 4
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_06
+#EXTINF:-1 tvg-id="Cctv07" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 07 แยกหนองบัว หนองบัว เมทัลชีท
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_07
+#EXTINF:-1 tvg-id="Cctv08" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 08 แยกหนองบัว หนองบัว ฝั่งปั๊มน้ำมัน
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_08
+#EXTINF:-1 tvg-id="Cctv09" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 09 แยกหน้าเมือง ฝั่งตลาดโต้รุ่ง
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_09
+#EXTINF:-1 tvg-id="Cctv10" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 10 แยกหน้าเมือง ฝั่งสถานีตำรวจ
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_10
+#EXTINF:-1 tvg-id="Cctv11" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 11 แยกหอนาฬิกา ฝั่งหน้าร้านเวดดิ้ง
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_11
+#EXTINF:-1 tvg-id="Cctv12" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 12 แยกหอนาฬิกา ฝั่งหน้าร้านตัดผมชาย
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_12
+#EXTINF:-1 tvg-id="Cctv13" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 13.1 แยกถาวร หน้า รพ.สัตว์ ตัวที่ 1
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_13.1
+#EXTINF:-1 tvg-id="Cctv14" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 13.2 แยกถาวร หน้า รพ.สัตว์ ตัวที่ 2
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_13.2
+#EXTINF:-1 tvg-id="Cctv15" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 14.2  แยกถาวร ใกล้เสาไฟจราจร ฝั่งหอสมุด ตัวที่ 2
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_14.2
+#EXTINF:-1 tvg-id="Cctv16" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 15.1 ถนนเจ้าขุนเณร ปากซอยถนนเจ้าขุนเณร ตัวที่ 1
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_15.1
+#EXTINF:-1 tvg-id="Cctv17" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 15.2 ถนนเจ้าขุนเณร ปากซอยถนนเจ้าขุนเณร ตัวที่ 2
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_15.2
+#EXTINF:-1 tvg-id="Cctv18" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 16.1 หน้าโบสถ์แม่พระราชินี หน้าโบสถ์แม่พระราชินี ตัวที่ 1
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_16.1
+#EXTINF:-1 tvg-id="Cctv19" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 16.2 หน้าโบสถ์แม่พระราชินี หน้าโบสถ์แม่พระราชินี ตัวที่ 2 
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_16.2
+#EXTINF:-1 tvg-id="Cctv20" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 17.1 แยกสะพานข้ามแม่น้ำแคว บริเวณใกล้ทางรถไฟ ตัวที่ 1
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_17.1
+#EXTINF:-1 tvg-id="Cctv21" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 17.2 แยกสะพานข้ามแม่น้ำแคว บริเวณใกล้ทางรถไฟ ตัวที่ 2
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_17.2
+#EXTINF:-1 tvg-id="Cctv22" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 18 แยกสะพานข้ามแม่น้ำแคว ใกล้ป้ายมูลนิธิพิทักษ์กาญจน์
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_18
+#EXTINF:-1 tvg-id="Cctv23" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 19.1 หน้าร้านริเวอร์แคว ใกล้ ATM กรุงไทย สะพานข้ามแม่น้ำแคว ตัวที่ 1
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_19.1
+#EXTINF:-1 tvg-id="Cctv24" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 19.2 หน้าร้านริเวอร์แคว ใกล้ ATM กรุงไทย สะพานข้ามแม่น้ำแคว ตัวที่ 2
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_19.2
+#EXTINF:-1 tvg-id="Cctv25" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 20.1 สะพานข้ามแม่น้ำแคว หน้าแพโฟลตติ้ง ตัวที่ 1
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_20.1
+#EXTINF:-1 tvg-id="Cctv26" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 20.2 สะพานข้ามแม่น้ำแคว หน้าแพโฟลตติ้ง ตัวที่ 2
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_20.2
+#EXTINF:-1 tvg-id="Cctv27" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 27  C27  สะพานข้ามแม่น้ำแคว
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_27
+#EXTINF:-1 tvg-id="Cctv28" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 28 C21 แก่งเสี้ยน หน้าร้านอมรชัย 2003
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_21
+#EXTINF:-1 tvg-id="Cctv29" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 29 C22 แก่งเสี้ยน ตรงข้ามหน้าร้านอมรชัย 2003
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_22
+#EXTINF:-1 tvg-id="Cctv30" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 30 C23 แก่งเสี้ยน ตรงข้ามร้านเมทัลชีท ท่าพะเนียด
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_23
+#EXTINF:-1 tvg-id="Cctv31" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 31 C24 แก่งเสี้ยน หน้าร้านเมทัลชีท ท่าพะเนียด
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_24
+#EXTINF:-1 tvg-id="Cctv32" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 32 C32 แยกบ้านพักคนชรา ใกล้ร้านกาแฟ ภู
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_32
+#EXTINF:-1 tvg-id="Cctv33" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 33 C33 แยกบ้านพักคนชรา หน้าร้านขายไม้ 
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_33
+
+
+#EXTINF:-1 tvg-id="Cctv41" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 41-แยกท่าไม้  ใกล้ร้านวรพล ฮาร์ดแวร์
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_41
+#EXTINF:-1 tvg-id="Cctv42" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 42 -C42   (สำรองในเมือง)
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_09
+
+#EXTINF:-1 tvg-id="Cctv44" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 44-สามแยกท่ามะกา-หน้าร้านขายยาท่ามะกาฟาร์มาซี
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_44
+#EXTINF:-1 tvg-id="Cctv46" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 45-สามแยกท่ามะกา-หน้าร้านวาริดาชุดวิวาห์
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_45
+#EXTINF:-1 tvg-id="Cctv46" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 46 ทต.ลูกแก อปท.5 กล้อง 1
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_46
+#EXTINF:-1 tvg-id="Cctv47" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 46 ทต.ลูกแก อปท.5 กล้อง 2
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_47
+#EXTINF:-1 tvg-id="Cctv48" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 48 แยกท่าล้อ หน้าอู่แจ็ค
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_48
+#EXTINF:-1 tvg-id="Cctv49" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 49 แยกท่าล้อ ใกล้ป้ายไป รพ.พหลฯ
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_49
+
+#EXTINF:-1 tvg-id="Cctv50" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 50 C53.1 มอเตอร์เวย์ หน้าร้านก๋วยเตี๋ยวใหญ่ ตัวที่ 1
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_53.1
+#EXTINF:-1 tvg-id="Cctv51" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 51 C53.2 มอเตอร์เวย์ หน้าร้านก๋วยเตี๋ยวใหญ่ ตัวที่ 2
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_53.2
+#EXTINF:-1 tvg-id="Cctv52" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 52 C54.1 มอเตอร์เวย์ หน้าร้านซ่อมมอเตอร์ไซค์ ตัวที่ 1
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_54.1
+#EXTINF:-1 tvg-id="Cctv53" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 53 C54.2 มอเตอร์เวย์ หน้าร้านซ่อมมอเตอร์ไซค์ ตัวที่ 2
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_54.2
+
+#EXTINF:-1 tvg-id="Cctv56" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 56 
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_56
+#EXTINF:-1 tvg-id="Cctv57" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 57 
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_57
+#EXTINF:-1 tvg-id="Cctv58" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 58 
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_58
+#EXTINF:-1 tvg-id="Cctv59" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 59 
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_59
+
+#EXTINF:-1 tvg-id="Cctv64" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 64 
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_64
+#EXTINF:-1 tvg-id="Cctv59" tvg-logo="https://s2.imgbb.ws/file/storage-sv2/81cfx.jpg" group-title="cctvkan",cctv 65 
+https://livecctv.kanpao.go.th/livecctv/stream.html?src=Camera_65
+
+
+
+
+
+

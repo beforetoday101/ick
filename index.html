@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#172033">
+<title>CCTV Monitor | Kanthaburi</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1422;--panel:#172033;--panel2:#202b40;--text:#edf3ff;--muted:#9eacc4;--accent:#68d5c2;--line:#2b3850;--danger:#ff8d8d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{position:sticky;top:0;z-index:10;background:#111a2bed;border-bottom:1px solid var(--line);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;backdrop-filter:blur(12px)}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}.brand-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#24433f;color:var(--accent);font-size:23px}.brand h1{font-size:18px;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:12px}
+button,input,select{font:inherit}button{border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:9px 12px;border-radius:10px;cursor:pointer}button:hover{border-color:var(--accent)}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.primary{background:var(--accent);color:#10201f;border-color:var(--accent);font-weight:700}
+main{max-width:1600px;margin:auto;padding:16px}.toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-bottom:14px}.search{flex:1;min-width:180px;background:var(--panel);color:var(--text);border:1px solid var(--line);padding:11px 13px;border-radius:10px}.toolbar select{background:var(--panel);color:var(--text);border:1px solid var(--line);padding:10px;border-radius:10px}.summary{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}.pill{background:var(--panel);border:1px solid var(--line);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px}.pill strong{color:var(--text)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:14px;align-items:start}.viewer-panel,.side-panel{background:var(--panel);border:1px solid var(--line);border-radius:15px;overflow:hidden}.panel-head{padding:12px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}.panel-head h2{font-size:14px;margin:0}.panel-head small{color:var(--muted)}
+#viewer{padding:10px;display:grid;grid-template-columns:1fr;gap:10px}.tile{min-width:0;background:#05080e;border:1px solid #334057;border-radius:11px;overflow:hidden;position:relative;aspect-ratio:16/9}.tile iframe{width:100%;height:100%;position:absolute;inset:0;border:0;background:#05080e}.tile-label{position:absolute;z-index:2;bottom:8px;left:8px;max-width:75%;background:#101827e8;border:1px solid #ffffff24;border-radius:7px;padding:5px 8px;font-size:12px;pointer-events:none}.tile-actions{position:absolute;z-index:3;top:7px;right:7px;display:flex;gap:5px}.tile-actions button{padding:5px 8px;background:#101827e8;font-size:12px}.empty{padding:36px 18px;text-align:center;color:var(--muted)}.empty strong{display:block;color:var(--text);margin-bottom:6px}
+#cameraList{display:flex;flex-direction:column;max-height:65vh;overflow:auto}.camera{display:flex;gap:10px;align-items:center;padding:11px 12px;border-bottom:1px solid var(--line);cursor:pointer}.camera:hover,.camera.active{background:#26374a}.camera.active{box-shadow:inset 3px 0 var(--accent)}.camera img{width:48px;height:42px;object-fit:cover;background:#0b101b;border-radius:8px;border:1px solid var(--line)}.camera-info{min-width:0;flex:1}.camera-name{font-weight:650;font-size:13px;overflow-wrap:anywhere}.camera-group{font-size:11px;color:var(--muted)}.star{color:#f6d77a;background:transparent;border:0;padding:5px;font-size:18px}
+.note{margin-top:14px;padding:12px 14px;background:#332b1c;border:1px solid #64502c;color:#f4dfae;border-radius:12px;font-size:13px}.note strong{display:block;margin-bottom:3px}.error{color:var(--danger);padding:15px}.footer{padding:18px;text-align:center;color:var(--muted);font-size:12px}
+body.light{--bg:#f2f5fa;--panel:#fff;--panel2:#eef2f8;--text:#1b2638;--muted:#66758b;--line:#d9e1ec;--accent:#198b7c}body.light header{background:#ffffffed}body.light .camera:hover,body.light .camera.active{background:#e9f4f2}body.light .note{background:#fff8e7;color:#73561b;border-color:#e7d49e}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.side-panel{order:2}#cameraList{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));max-height:36vh}.camera{border-right:1px solid var(--line)}}
+@media(max-width:540px){header{padding:10px 12px}.brand h1{font-size:16px}.brand p{font-size:11px}.brand-icon{width:37px;height:37px}header .head-actions button{padding:8px}.head-actions .hide-mobile{display:none}main{padding:10px}.toolbar{gap:7px}.search{min-width:100%;order:-1}.toolbar button,.toolbar select{flex:1}.panel-head{padding:10px}.tile{aspect-ratio:16/10}#viewer{padding:7px;gap:7px}#cameraList{grid-template-columns:repeat(2,minmax(0,1fr))}.camera{padding:9px;gap:7px}.camera img{width:38px;height:36px}.camera-name{font-size:12px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="brand-icon" aria-hidden="true">◉</div><div><h1>CCTV Monitor</h1><p>Live camera viewer · responsive dashboard</p></div></div>
+  <div class="head-actions"><button id="themeBtn" title="เปลี่ยนธีม">☼ ธีม</button> <button id="reloadBtn" class="primary">↻ <span class="hide-mobile">โหลดรายการ</span></button></div>
+</header>
+<main>
+  <div class="toolbar">
+    <input id="search" class="search" type="search" placeholder="ค้นหากล้อง เช่น CCTV 01…" aria-label="ค้นหากล้อง">
+    <select id="viewMode" aria-label="จำนวนช่องแสดงผล"><option value="1">มุมมอง 1 กล้อง</option><option value="4">มุมมอง 4 กล้อง</option><option value="9">มุมมอง 9 กล้อง</option></select>
+    <button id="favoritesBtn">☆ รายการโปรด</button>
+    <button id="stopBtn">หยุดแสดง</button>
+  </div>
+  <div class="summary"><span class="pill">รายการกล้อง <strong id="count">กำลังโหลด…</strong></span><span class="pill">กำลังแสดง <strong id="showing">0</strong></span><span class="pill">แหล่งข้อมูล <strong>cctv.m3u</strong></span></div>
+  <div class="layout">
+    <section class="viewer-panel">
+      <div class="panel-head"><h2 id="viewerTitle">หน้าจอแสดงภาพ</h2><small id="activeName">ยังไม่ได้เลือกกล้อง</small></div>
+      <div id="viewer"><div class="empty"><strong>กำลังโหลดรายการกล้อง…</strong>กรุณารอสักครู่</div></div>
+    </section>
+    <aside class="side-panel">
+      <div class="panel-head"><h2>รายการกล้อง</h2><small id="listCount"></small></div>
+      <div id="cameraList"><div class="empty">กำลังอ่านไฟล์ cctv.m3u</div></div>
+    </aside>
+  </div>
+  <div class="note"><strong>หมายเหตุเกี่ยวกับการเปิดภาพ</strong>รายการ cctv ที่ให้มาชี้ไปยังหน้าเว็บ เพื่อช่วยความปรอดภัย สาธารณประโยชน์</div>
+</main>
+<div class="footer">CCTV Monitor · ใช้ไฟล์รายการกล้อง cctv.m3u ที่อยู่ในโฟลเดอร์เดียวกัน</div>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const viewer = $('viewer'), cameraList = $('cameraList');
+  let cameras = [], selectedId = null, favoritesOnly = false, visibleIds = [];
+  const favorites = new Set(JSON.parse(localStorage.getItem('cctvFavorites') || '[]'));
+  const safe = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function parseM3U(text) {
+    const lines = text.replace(/^\uFEFF/, '').split(/\r?\n/);
+    const out = []; let pending = null;
+    for (const raw of lines) {
+      const line = raw.trim();
+      if (!line) continue;
+      if (line.startsWith('#EXTINF')) {
+        const comma = line.indexOf(',');
+        const name = comma >= 0 ? line.slice(comma + 1).trim() : 'กล้องไม่ระบุชื่อ';
+        const attr = key => (line.match(new RegExp('(?:^|\\s)' + key + '="([^"]*)"')) || [,''])[1];
+        pending = {name: name || 'กล้องไม่ระบุชื่อ', id: attr('tvg-id'), logo: attr('tvg-logo'), group: attr('group-title') || 'กล้องทั่วไป'};
+      } else if (!line.startsWith('#') && pending) {
+        try {
+          const url = new URL(line, location.href);
+          if (url.protocol === 'http:' || url.protocol === 'https:') {
+            out.push({...pending, url: url.href, key: pending.id || url.href});
+          }
+        } catch (_) {}
+        pending = null;
+      }
+    }
+    return out;
+  }
+  function filteredCameras() {
+    const q = $('search').value.trim().toLowerCase();
+    return cameras.filter(c => (!favoritesOnly || favorites.has(c.key)) &&
+      (!q || (c.name + ' ' + c.group + ' ' + c.id).toLowerCase().includes(q)));
+  }
+  function renderList() {
+    const items = filteredCameras();
+    $('listCount').textContent = items.length + ' รายการ';
+    cameraList.innerHTML = '';
+    if (!items.length) {
+      cameraList.innerHTML = '<div class="empty">ไม่พบกล้องที่ตรงกับเงื่อนไข</div>';
+      return;
+    }
+    for (const c of items) {
+      const row = document.createElement('div');
+      row.className = 'camera' + (visibleIds.includes(c.key) ? ' active' : '');
+      row.setAttribute('role','button'); row.tabIndex = 0;
+      const img = document.createElement('img');
+      img.alt = ''; img.loading = 'lazy'; img.src = c.logo || '';
+      img.onerror = () => { img.style.visibility = 'hidden'; };
+      const info = document.createElement('div'); info.className = 'camera-info';
+      info.innerHTML = '<div class="camera-name">' + safe(c.name) + '</div><div class="camera-group">' + safe(c.group) + '</div>';
+      const star = document.createElement('button'); star.className = 'star'; star.title = 'เพิ่ม/นำออกจากรายการโปรด';
+      star.textContent = favorites.has(c.key) ? '★' : '☆';
+      star.setAttribute('aria-label', star.title);
+      star.onclick = e => { e.stopPropagation(); toggleFavorite(c.key); };
+      row.append(img, info, star);
+      row.onclick = () => selectCamera(c.key);
+      row.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectCamera(c.key); } };
+      cameraList.appendChild(row);
+    }
+  }
+  function tileFor(c) {
+    const tile = document.createElement('div'); tile.className = 'tile';
+    const label = document.createElement('div'); label.className = 'tile-label'; label.textContent = c.name;
+    const actions = document.createElement('div'); actions.className = 'tile-actions';
+    const open = document.createElement('button'); open.textContent = '↗'; open.title = 'เปิดหน้าเว็บกล้องในแท็บใหม่';
+    open.onclick = () => window.open(c.url, '_blank', 'noopener,noreferrer');
+    actions.appendChild(open);
+    const frame = document.createElement('iframe');
+    frame.src = c.url; frame.title = c.name; frame.loading = 'lazy';
+    frame.allow = 'autoplay; fullscreen; picture-in-picture'; frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    tile.append(frame, label, actions);
+    return tile;
+  }
+  function renderViewer(ids) {
+    visibleIds = ids.slice(); viewer.innerHTML = '';
+    const mode = Number($('viewMode').value);
+    viewer.style.gridTemplateColumns = mode === 1 ? '1fr' : 'repeat(2,minmax(0,1fr))';
+    if (!ids.length) {
+      viewer.innerHTML = '<div class="empty"><strong>ยังไม่ได้เลือกกล้อง</strong>เลือกกล้องจากรายการด้านขวา หรือด้านล่างบนมือถือ</div>';
+    } else {
+      ids.forEach(id => { const c = cameras.find(x => x.key === id); if (c) viewer.appendChild(tileFor(c)); });
+    }
+    $('showing').textContent = ids.length;
+    $('activeName').textContent = ids.map(id => cameras.find(c => c.key === id)?.name).filter(Boolean).join(' · ') || 'ยังไม่ได้เลือกกล้อง';
+    $('viewerTitle').textContent = mode === 1 ? 'หน้าจอแสดงภาพ' : 'มุมมองหลายกล้อง (' + mode + ' ช่อง)';
+    renderList();
+  }
+  function selectCamera(key) {
+    selectedId = key;
+    const mode = Number($('viewMode').value);
+    let ids;
+    if (mode === 1) ids = [key];
+    else {
+      const pool = filteredCameras();
+      const idx = pool.findIndex(c => c.key === key);
+      ids = pool.slice(Math.max(0, idx), Math.max(0, idx) + mode).map(c => c.key);
+      if (ids.length < mode && idx > 0) ids = pool.slice(Math.max(0, pool.length - mode)).map(c => c.key);
+    }
+    renderViewer(ids);
+    localStorage.setItem('cctvLast', key);
+  }
+  function toggleFavorite(key) {
+    if (favorites.has(key)) favorites.delete(key); else favorites.add(key);
+    localStorage.setItem('cctvFavorites', JSON.stringify([...favorites]));
+    renderList();
+  }
+  async function loadPlaylist() {
+    $('count').textContent = 'กำลังโหลด…';
+    cameraList.innerHTML = '<div class="empty">กำลังอ่าน cctv.m3u…</div>';
+    try {
+      const response = await fetch('cctv.m3u', {cache:'no-store'});
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      cameras = parseM3U(await response.text());
+      $('count').textContent = cameras.length;
+      if (!cameras.length) throw new Error('ไม่พบรายการกล้องในไฟล์ cctv.m3u');
+      const last = localStorage.getItem('cctvLast');
+      renderList();
+      selectCamera(cameras.some(c => c.key === last) ? last : cameras[0].key);
+    } catch (err) {
+      $('count').textContent = 'โหลดไม่สำเร็จ';
+      cameraList.innerHTML = '<div class="error"><strong>ไม่สามารถโหลด cctv.m3u</strong><p>' + safe(err.message) + '</p><p>ตรวจสอบว่าไฟล์อยู่โฟลเดอร์เดียวกับ index.html และเปิดเว็บผ่าน HTTP/HTTPS server ไม่ใช่เปิดไฟล์ด้วย file://</p><button id="retryBtn">ลองอีกครั้ง</button></div>';
+      $('retryBtn').onclick = loadPlaylist;
+      viewer.innerHTML = '<div class="empty"><strong>ยังไม่มีรายการกล้อง</strong>เมื่อโหลด cctv.m3u สำเร็จ ภาพจะแสดงที่นี่</div>';
+    }
+  }
+  $('search').addEventListener('input', () => renderList());
+  $('viewMode').addEventListener('change', () => {
+    if (selectedId) selectCamera(selectedId);
+  });
+  $('favoritesBtn').onclick = () => {
+    favoritesOnly = !favoritesOnly;
+    $('favoritesBtn').textContent = favoritesOnly ? '★ แสดงทั้งหมด' : '☆ รายการโปรด';
+    renderList();
+  };
+  $('stopBtn').onclick = () => { visibleIds = []; renderViewer([]); };
+  $('reloadBtn').onclick = loadPlaylist;
+  $('themeBtn').onclick = () => {
+    document.body.classList.toggle('light');
+    localStorage.setItem('cctvTheme', document.body.classList.contains('light') ? 'light' : 'dark');
+  };
+  if (localStorage.getItem('cctvTheme') === 'light') document.body.classList.add('light');
+  loadPlaylist();
+})();
+</script>
+</body>
+</html>
